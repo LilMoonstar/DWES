@@ -9,6 +9,6 @@ Contiene sintaxis markdown y se usa para:
 * Explicar a los interesados cómo contribuir
 * etc.
 
-No sé bien que añadir aquí 
+Comentario añadido de prueba 
 
 <img src="https://static.vecteezy.com/system/resources/previews/016/457/775/original/realistic-computer-drawing-of-a-cat-png.png" width="300">
