@@ -60,7 +60,7 @@ DROP TABLE IF EXISTS `tJuegos`;
 CREATE TABLE `tJuegos` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `nombre` varchar(50) DEFAULT NULL,
-  `url_imagen` varchar(200) DEFAULT NULL,
+  `url_imagen` varchar(700) DEFAULT NULL,
   `añolanzamiento` int(11) DEFAULT NULL,
   `categoría` varchar(200) DEFAULT NULL,
   PRIMARY KEY (`id`)
@@ -74,9 +74,9 @@ CREATE TABLE `tJuegos` (
 LOCK TABLES `tJuegos` WRITE;
 /*!40000 ALTER TABLE `tJuegos` DISABLE KEYS */;
 INSERT INTO `tJuegos` VALUES
-(4,'League of Legends','https://i.pinimg.com/originals/95/e2/be/95e2beeff28cf0ca9a65acc6616c0bd6.png',2009,'MOBA'),
-(5,'CallOfDutyMW2','https://image.api.playstation.com/vulcan/ap/rnd/202205/2800/W7uSEsW7yefCNTHatS03v5q7.png',2009,'FPS'),
-(6,'PokemonGo','https://sm.ign.com/ign_es/screenshot/default/maxresdefault_6498.jpg',2016,'AR'),
+(4,'League of Legends','https://theme.zdassets.com/theme_assets/43400/87a1ef48e43b8cf114017e3ad51b801951b20fcf.jpg',2009,'MOBA'),
+(5,'CallOfDutyMW2','https://img.asmedia.epimg.net/resizer/qiK0EWW_bx90BtGqyHtcRGVbCW8=/1472x1104/cloudfront-eu-central-1.images.arcpublishing.com/diarioas/7TNLGED5ARJTFA4GC4CBJOGGGI.jpg',2009,'FPS'),
+(6,'PokemonGo','https://www.pokemon.com/static-assets/content-assets/cms2/img/video-games/_tiles/pokemon-go/2023/09052023/pokemon-go-169.png',2016,'AR'),
 (7,'Minecraft','https://www.minecraft.net/content/dam/games/minecraft/key-art/SUPM_Game-Image_One-Vanilla_672x400.jpg',2011,'Sandbox'),
 (8,'Roblox','https://doplay.es/wp-content/uploads/2020/10/Roblox-GamersRD.jpeg',2006,'Multijugador');
 /*!40000 ALTER TABLE `tJuegos` ENABLE KEYS */;
