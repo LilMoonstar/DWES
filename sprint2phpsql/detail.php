@@ -9,8 +9,8 @@ $db = mysqli_connect('localhost', 'root', '1234', 'mysitedb') or die('Fail');
     <style>
         body {
             font-family: "Roboto", sans-serif;
-            background-color: #363232;
-            color: #c4bcbb;
+            background-color: #55ed71;
+            color: #white;
             max-width: 800px;
             margin: 0 auto;
             padding: 20px;
@@ -20,13 +20,13 @@ $db = mysqli_connect('localhost', 'root', '1234', 'mysitedb') or die('Fail');
         h1 {
             font-weight: bold;
             text-align: center;
-            color: #cc472b;
+            color: black;
         }
 
         h3 {
             font-weight: bold;
             text-align: center;
-            color: white;
+            color: #03290e;
         }
 
         .game-details {
@@ -41,8 +41,8 @@ $db = mysqli_connect('localhost', 'root', '1234', 'mysitedb') or die('Fail');
             border: 1px solid #fff;
             margin: 10px;
             padding: 10px;
-            background-color: #fff;
-            color: #000;
+            background-color: #298543;
+            color: #03290e;
         }
 
         img {
