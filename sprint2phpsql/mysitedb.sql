@@ -75,7 +75,7 @@ LOCK TABLES `tJuegos` WRITE;
 /*!40000 ALTER TABLE `tJuegos` DISABLE KEYS */;
 INSERT INTO `tJuegos` VALUES
 (4,'League of Legends','https://theme.zdassets.com/theme_assets/43400/87a1ef48e43b8cf114017e3ad51b801951b20fcf.jpg',2009,'MOBA'),
-(5,'CallOfDutyMW2','https://img.asmedia.epimg.net/resizer/qiK0EWW_bx90BtGqyHtcRGVbCW8=/1472x1104/cloudfront-eu-central-1.images.arcpublishing.com/diarioas/7TNLGED5ARJTFA4GC4CBJOGGGI.jpg',2009,'FPS'),
+(5,'CallOfDutyMW2','https://cdn.hobbyconsolas.com/sites/navi.axelspringer.es/public/media/image/2022/11/guia-trucos-call-duty-modern-warfare-ii-2865609.jpg?tf=3840x',2009,'FPS'),
 (6,'PokemonGo','https://www.pokemon.com/static-assets/content-assets/cms2/img/video-games/_tiles/pokemon-go/2023/09052023/pokemon-go-169.png',2016,'AR'),
 (7,'Minecraft','https://www.minecraft.net/content/dam/games/minecraft/key-art/SUPM_Game-Image_One-Vanilla_672x400.jpg',2011,'Sandbox'),
 (8,'Roblox','https://doplay.es/wp-content/uploads/2020/10/Roblox-GamersRD.jpeg',2006,'Multijugador');
