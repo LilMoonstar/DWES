@@ -15,7 +15,7 @@ $result = mysqli_query($db, $query) or die('Error en la consulta');
         body {
             font-family: "Roboto", sans-serif;
             background-color: #363232;
-	    color: #000;
+	    color: #c4bcbb;
 	    max-width: 800px;
 	    margin: 0 auto;
 	    padding: 20px;
