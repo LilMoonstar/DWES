@@ -96,6 +96,9 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         $insert_query = "INSERT INTO tComentarios (comentario, usuario_id, juego_id) VALUES ('$new_comment', NULL, $juego_id)";
         mysqli_query($db, $insert_query) or die('Error al agregar el comentario');
         echo '<p>Nuevo comentario agregado</p>';
+        // Redirigir a comentario.php con un mensaje de éxito
+        header("Location: comentario.php?juego_id=$juego_id&success=1");
+        exit;
     } else {
         echo '<p>El comentario está vacío y no se pudo agregar.</p>';
     }
