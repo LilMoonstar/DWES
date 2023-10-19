@@ -41,7 +41,7 @@ $db = mysqli_connect('localhost', 'root', '1234', 'mysitedb') or die('Fail');
             border: 1px solid #fff;
             margin: 10px;
             padding: 10px;
-            background-color: #298543;
+            background-color: white;
             color: #03290e;
         }
 
