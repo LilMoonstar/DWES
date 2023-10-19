@@ -51,6 +51,11 @@ $db = mysqli_connect('localhost', 'root', '1234', 'mysitedb') or die('Fail');
             display: block;
             margin: 0 auto;
         }
+
+        form {
+            text-align: center;
+            margin-top: 20px;
+        }
     </style>
 </head>
 <body>
@@ -82,6 +87,14 @@ while ($comment = mysqli_fetch_assoc($result_comments)) {
     echo '<p>ID del usuario: ' . $comment['usuario_id'] . '</p>';
     echo '</div>';
 }
+
+// Formulario para agregar un nuevo comentario
+echo '<form action="/comment.php" method="post">';
+echo '<h3>Deja un nuevo comentario:</h3>';
+echo '<textarea rows="4" cols="50" name="new_comment"></textarea><br>';
+echo '<input type="hidden" name="juego_id" value="' . $juego_id . '">';
+echo '<input type="submit" value="Comentar">';
+echo '</form>';
 
 // Cerrar la conexión a la base de datos
 mysqli_close($db);
