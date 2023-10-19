@@ -89,10 +89,21 @@ while ($comment = mysqli_fetch_assoc($result_comments)) {
 }
 
 // Formulario para agregar un nuevo comentario
-echo '<form action="/comment.php" method="post">';
+if ($_SERVER['REQUEST_METHOD'] === 'POST') {
+    // Procesar el comentario
+    $new_comment = $_POST['new_comment'];
+    if (!empty($new_comment)) {
+        $insert_query = "INSERT INTO tComentarios (comentario, usuario_id, juego_id) VALUES ('$new_comment', NULL, $juego_id)";
+        mysqli_query($db, $insert_query) or die('Error al agregar el comentario');
+        echo '<p>Nuevo comentario agregado</p>';
+    } else {
+        echo '<p>El comentario está vacío y no se pudo agregar.</p>';
+    }
+}
+
+echo '<form action="/detail.php?id=' . $juego_id . '" method="post">';
 echo '<h3>Deja un nuevo comentario:</h3>';
 echo '<textarea rows="4" cols="50" name="new_comment"></textarea><br>';
-echo '<input type="hidden" name="juego_id" value="' . $juego_id . '">';
 echo '<input type="submit" value="Comentar">';
 echo '</form>';
 
