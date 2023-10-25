@@ -82,7 +82,9 @@ $result_comments = mysqli_query($db, $query_comments) or die('Error en la consul
 
 echo '<h3>Comentarios:</h3>';
 while ($comment = mysqli_fetch_assoc($result_comments)) {
-    echo '<li>'.$row['comentario'].'</li>';
+    	echo '<div class="comment">';
+	echo '<li>'.$comment['comentario'].'</li>';
+	echo '</div>';
 }
 
 // Cerrar la conexión a la base de datos
@@ -91,7 +93,7 @@ mysqli_close($db);
 ?>
 
 <br>
-<h3>Inserta tu comentario aquí:
+<h3>Inserta tu comentario aquí: </h3>
 
 <form action="/comentario.php"method="post">
 <textarea rows="4" cols="50" name="new_comment"></textarea><br>
