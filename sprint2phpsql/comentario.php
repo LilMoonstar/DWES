@@ -25,13 +25,13 @@ $comentario=$_POST['new_comment'];
 
 // Inserción del contenido del comentario en la tabla de SQL
 
-$query = "INSERT INTO tComentarios (comentario,usuario_id,juego_id) VALUES ('$comentario',NULL,$juego_id)";
+$query = "INSERT INTO tComentarios (comentario,usuario_id,juego_id) VALUES ('$comentario',NULL,'$juego_id')";
 mysqli_query($db,$query) or die('Error de creacion');
 
 //Texto de la página
 
 echo "<p>Nuevo comentario número ".mysqli_insert_id($db)." añadido con éxito</p>";
-echo "<a href='/detail.php?juego_id=".$juego_id">Volver a los comentarios</a>";
+echo "<a href='/detail.php?juego_id=".$juego_id." '>Volver a los comentarios</a>";
 
 // Cerrar la base de datos
 mysqli_close($db);
