@@ -97,7 +97,7 @@ mysqli_close($db);
 
 <form action="/comentario.php"method="post">
 <textarea rows="4" cols="50" name="new_comment"></textarea><br>
-<input type="hidden" name="juego_id" value="<?php echo $juego_id;?>">
+<input type="hidden" name="id" value="<?php echo $juego_id;?>">
 <input type="submit" value="Comentar">
 
 
