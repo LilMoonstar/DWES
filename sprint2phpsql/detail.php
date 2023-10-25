@@ -2,7 +2,6 @@
 // Establecer la conexión a la base de datos
 $db = mysqli_connect('localhost', 'root', '1234', 'mysitedb') or die('Fail');
 ?>
-<!DOCTYPE html>
 <html>
 <head>
     <title>Detalles del Juego y Comentarios</title>
@@ -70,6 +69,7 @@ $query = "SELECT * FROM tJuegos WHERE id = $juego_id";
 $result = mysqli_query($db, $query) or die('Error en la consulta');
 $game_details = mysqli_fetch_assoc($result);
 
+
 echo '<h1>Detalles del Juego</h1>';
 echo '<p>Nombre del juego: ' . $game_details['nombre'] . '</p>';
 echo '<img src="' . $game_details['url_imagen'] . '" alt="Imagen del juego">';
@@ -82,36 +82,24 @@ $result_comments = mysqli_query($db, $query_comments) or die('Error en la consul
 
 echo '<h3>Comentarios:</h3>';
 while ($comment = mysqli_fetch_assoc($result_comments)) {
-    echo '<div class="comment">';
-    echo '<p>Comentario: ' . $comment['comentario'] . '</p>';
-    echo '<p>ID del usuario: ' . $comment['usuario_id'] . '</p>';
-    echo '</div>';
+    echo '<li>'.$row['comentario'].'</li>';
 }
-
-// Formulario para agregar un nuevo comentario
-if ($_SERVER['REQUEST_METHOD'] === 'POST') {
-    // Procesar el comentario
-    $new_comment = $_POST['new_comment'];
-    if (!empty($new_comment)) {
-        $insert_query = "INSERT INTO tComentarios (comentario, usuario_id, juego_id) VALUES ('$new_comment', NULL, $juego_id)";
-        mysqli_query($db, $insert_query) or die('Error al agregar el comentario');
-        echo '<p>Nuevo comentario agregado</p>';
-        // Redirigir a comentario.php con un mensaje de éxito
-        header("Location: comentario.php?juego_id=$juego_id&success=1");
-        exit;
-    } else {
-        echo '<p>El comentario está vacío y no se pudo agregar.</p>';
-    }
-}
-
-echo '<form action="/detail.php?id=' . $juego_id . '" method="post">';
-echo '<h3>Deja un nuevo comentario:</h3>';
-echo '<textarea rows="4" cols="50" name="new_comment"></textarea><br>';
-echo '<input type="submit" value="Comentar">';
-echo '</form>';
 
 // Cerrar la conexión a la base de datos
+
 mysqli_close($db);
 ?>
+
+<br>
+<h3>Inserta tu comentario aquí:
+
+<form action="/comentario.php"method="post">
+<textarea rows="4" cols="50" name="new_comment"></textarea><br>
+<input type="hidden" name="juego_id" value="<?php echo $juego_id;?>">
+<input type="submit" value="Comentar">
+
+
+</form>
+
 </body>
 </html>
