@@ -83,7 +83,7 @@ $result_comments = mysqli_query($db, $query_comments) or die('Error en la consul
 echo '<h3>Comentarios:</h3>';
 while ($comment = mysqli_fetch_assoc($result_comments)) {
     	echo '<div class="comment">';
-	echo '<li>'.$comment['comentario'].'</li>';
+	echo '<li>'.$comment['comentario'].'<br>'.$comment['fecha'].'</li>';
 	echo '</div>';
 }
 

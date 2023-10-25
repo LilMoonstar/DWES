@@ -25,7 +25,7 @@ $comentario=$_POST['new_comment'];
 
 // Inserción del contenido del comentario en la tabla de SQL
 
-$query = "INSERT INTO tComentarios (comentario,usuario_id,juego_id) VALUES ('$comentario',NULL,'$juego_id')";
+$query = "INSERT INTO tComentarios (comentario,usuario_id,juego_id) VALUES ('".$comentario."',NULL,".$juego_id.",now())";
 mysqli_query($db,$query) or die('Error de creacion');
 
 //Texto de la página
