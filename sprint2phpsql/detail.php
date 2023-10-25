@@ -77,7 +77,7 @@ echo '<p>Año de Lanzamiento: ' . $game_details['añolanzamiento'] . '</p>';
 echo '<p>Categoría: ' . $game_details['categoría'] . '</p>';
 
 // Consulta para obtener los comentarios relacionados con el juego
-$query_comments = "SELECT * FROM tComentarios WHERE juego_id = $juego_id";
+$query_comments = 'SELECT * FROM tComentarios WHERE juego_id ='.$juego_id;
 $result_comments = mysqli_query($db, $query_comments) or die('Error en la consulta de comentarios');
 
 echo '<h3>Comentarios:</h3>';
