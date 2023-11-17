@@ -40,8 +40,6 @@ $result = mysqli_query($db, $query) or die('Error en la consulta');
             padding: 10px;
             background-color: #fff;
             color: #000;
-	    opacity: 0.5;
-	   transition: opacity 0.5s ease-in-out;
         }
 
         img {
@@ -49,14 +47,8 @@ $result = mysqli_query($db, $query) or die('Error en la consulta');
             max-height: 5000px;
        	    display: block;
 	    margin: 0 auto;
-	    transition:all 0.5s ease-in-out;
+
 	 }
-
-	.comment:hover img {
-	   max-width: 600px;
-	   max-height: 600px;
-}
-
     </style>
 </head>
 
