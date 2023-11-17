@@ -23,6 +23,15 @@ $db = mysqli_connect('localhost','root','1234','mysitedb')or die('Fail');
 $juego_id=$_POST['juego_id'];
 $comentario=$_POST['new_comment'];
 
+// Session start
+
+ session_start();
+            $user_id = NULL;
+            if (!empty($_SESSION['user_id'])) {
+                $user_id = $_SESSION['user_id'];
+            }
+
+
 // Inserción del contenido del comentario en la tabla de SQL
 
 $query = "INSERT INTO tComentarios (comentario,usuario_id,juego_id) VALUES ('$comentario',NULL,'$juego_id')";
@@ -39,3 +48,7 @@ mysqli_close($db);
 ?>
 </body>
 </html>
+
+
+    $db = mysqli_connect('localhost', 'root', '1234', 'mysitedb') or die('Fail'); // CONEXIÓN ENTRE PHP y la base de datos.
+?>
