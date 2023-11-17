@@ -8,7 +8,7 @@
             document.getElementById("login_form").addEventListener('submit', validateForm);
         });
 
-        function validateForm(event) {
+        function validateForm(event) { <!--Esta sección ya la había hecho previamente en clase así que al pasarla al documento de casa ya la había realizado en un ejercicio anterior, aunque correspondía a este -->
             event.preventDefault();
             let mail = document.getElementById('mail').value;
             if (mail.length == 0) {
