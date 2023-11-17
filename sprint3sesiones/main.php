@@ -84,7 +84,9 @@ $result = mysqli_query($db, $query) or die('Error en la consulta');
 		echo '</div>';
 	}
 	?>
-
+			<a href="/register.html">Registrarse</a>
+			<a href="/login.html">Login</a>
+			<a href="/logout.php">Logout</a>		
 </body>
 </html>
 
